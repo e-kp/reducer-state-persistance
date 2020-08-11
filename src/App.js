@@ -43,7 +43,8 @@ export default function App() {
   ///
 
   useEffect(() => {
-    window.localStorage.setItem("arrayNumbers", state);
+    //Added a type Array to the item in local storage to typecast at the moment of setting and getting
+    window.localStorage.setItem(Array("arrayNumbers"), state);
     console.log(window.localStorage.getItem("arrayNumbers"));
   }, [state]);
 
